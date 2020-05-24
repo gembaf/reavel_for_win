@@ -1,0 +1,11 @@
+p.novel_title = @novel.title
+
+#novel_ex = @novel.summary
+
+br
+
+#index_box
+  - @novel.chapters.each do |chapter|
+    dl.novel_sublist2
+      dd.subtitle = link_to chapter.title
+

@@ -5,5 +5,5 @@ br
 #index_box
   - @novels.each do |novel|
     dl.novel_sublist2
-      dd.subtitle = link_to novel.title
+      dd.subtitle = link_to novel.title, novel_path(novel)
 
