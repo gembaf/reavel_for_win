@@ -8,7 +8,7 @@ br
       dl.novel_sublist2
         dd.subtitle = link_to chapter.title, chapter_path(chapter)
   - else
-    /- @chapter.stories.each do |story|
+    - @chapter.stories.each do |story|
       dl.novel_sublist2
-        dd.subtitle = link_to story.title, story_path(chapter)
+        dd.subtitle = link_to story.title, story_path(story)
 
