@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_055423) do
+ActiveRecord::Schema.define(version: 2020_05_24_073851) do
 
   create_table "chapters", force: :cascade do |t|
     t.string "title", null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_05_24_055423) do
     t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["chapter_id", "no"], name: "index_stories_on_chapter_id_and_no", unique: true
   end
 
 end
