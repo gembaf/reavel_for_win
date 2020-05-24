@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_052605) do
+ActiveRecord::Schema.define(version: 2020_05_24_054058) do
+
+  create_table "chapters", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "parent_type", null: false
+    t.integer "parent_id", null: false
+    t.integer "no", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_type", "parent_id", "no"], name: "index_chapters_on_parent_type_and_parent_id_and_no", unique: true
+  end
 
   create_table "novels", force: :cascade do |t|
     t.string "title", null: false
