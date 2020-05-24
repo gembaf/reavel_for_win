@@ -1,0 +1,14 @@
+p.novel_title = @chapter.title
+
+br
+
+#index_box
+  - if @chapter.chapters.present?
+    - @chapter.chapters.each do |chapter|
+      dl.novel_sublist2
+        dd.subtitle = link_to chapter.title, chapter_path(chapter)
+  - else
+    /- @chapter.stories.each do |story|
+      dl.novel_sublist2
+        dd.subtitle = link_to story.title, story_path(chapter)
+
